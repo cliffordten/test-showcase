@@ -2,8 +2,8 @@
 
 .wrapper {
   width: 100%;
-  background-color: #161616;
-  color: #f8f8f8;
+  background-color: #1b1b1b;
+  color: #d5d5d5;
 
   .container {
     width: 70%;
@@ -35,7 +35,7 @@
       .event {
         display: flex;
         padding: 1em 0;
-        border-bottom: 0.1em solid #f8f8f8;
+        border-bottom: 1px solid #606770;
 
         & > .col {
           flex: 1;
@@ -51,7 +51,7 @@
           .event_name,
           .event_time {
             width: 100%;
-            border-bottom: 0.1em solid #f8f8f8;
+            border-bottom: 1px solid #606770;
             padding-bottom: 0.5em;
 
             h3 {
@@ -68,6 +68,7 @@
             -webkit-box-orient: vertical;
             margin: 0.7em 0;
             font-size: 0.9em;
+            color: #ababab;
 
             p {
               font-weight: 300;
