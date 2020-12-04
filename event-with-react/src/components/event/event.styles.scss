@@ -1,0 +1,86 @@
+//************************* event global styles ****************************//
+
+.wrapper {
+  width: 100%;
+  background-color: #1b1b1b;
+  color: #d5d5d5;
+
+  .container {
+    width: 70%;
+    margin: auto;
+    padding: 1em;
+
+    .event_title {
+      width: fit-content;
+      margin: auto;
+      background-color: #f8f8f8;
+      color: #161616;
+
+      h2 {
+        padding: 0.2em 0.6em;
+        letter-spacing: 0.3em;
+        font-weight: 200;
+        text-transform: uppercase;
+        font-size: 0.8em;
+      }
+    }
+
+    .event_container {
+      padding: 1em 0;
+
+      & > .row {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//************************* event responsive query media styles ****************************//
+
+@media (min-width: 2560px) {
+  body {
+    font-size: 160%;
+  }
+
+  .wrapper .container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 567px) {
+  body {
+    font-size: 75%;
+  }
+  .wrapper .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 475px) {
+  body {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 443px) {
+  body {
+    font-size: 90%;
+  }
+  .wrapper {
+    .container {
+      width: 90%;
+    }
+  }
+}
