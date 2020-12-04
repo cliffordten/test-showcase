@@ -1,86 +1,154 @@
 //************************* event global styles ****************************//
 
-.wrapper {
-  width: 100%;
-  background-color: #1b1b1b;
-  color: #d5d5d5;
+.event {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "date info info venu"
+    "date btn btn btn";
+  padding: 1em 0;
+  border-bottom: 1px solid #606770;
 
-  .container {
-    width: 70%;
-    margin: auto;
-    padding: 1em;
+  .event_info {
+    grid-area: info;
+  }
 
-    .event_title {
+  .event_venu {
+    grid-area: venu;
+  }
+
+  .event_detail_btn {
+    grid-area: btn;
+  }
+
+  .event_info,
+  .event_venu {
+    padding-right: 1.2em;
+
+    .event_name,
+    .event_time {
+      width: 100%;
+      border-bottom: 1px solid #606770;
+      padding-bottom: 0.5em;
+
+      h3 {
+        font-weight: 550;
+      }
+    }
+
+    .event_desc,
+    .event_loc {
+      overflow: hidden;
+      width: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      margin: 0.7em 0;
+      font-size: 0.9em;
+      color: #ababab;
+
+      p {
+        font-weight: 300;
+        line-height: 1.4em;
+      }
+    }
+  }
+
+  .event_venu {
+    .event_time {
       width: fit-content;
-      margin: auto;
-      background-color: #f8f8f8;
-      color: #161616;
-
-      h2 {
-        padding: 0.3em 0.6em;
-        letter-spacing: 0.3em;
-        font-weight: 200;
-        text-transform: uppercase;
-        font-size: 0.8em;
-      }
+      margin-left: auto;
     }
-
-    .event_container {
-      padding: 1em 0;
-
-      & > .row {
-        width: 100%;
-      }
+    .event_loc {
+      text-align: right;
     }
+  }
+
+  .event_date {
+    grid-area: date;
+    h3 {
+      font-weight: bold;
+      font-size: 1.5em;
+      text-align: center;
+      width: 20%;
+      padding: 0.3em 0.7em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+button[type="button"] {
+  padding: 0.4em 0;
+  background-color: unset;
+  color: #f38c01;
+  border: 0;
+  font-size: 0.9em;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }
 
 //************************* event responsive query media styles ****************************//
 
-@media (min-width: 2560px) {
-  body {
-    font-size: 160%;
-  }
-
-  .wrapper .container {
-    width: 50%;
-  }
-}
-
-@media (max-width: 1024px) {
-  .wrapper .container {
-    width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 90%;
-  }
-}
-
-@media (max-width: 567px) {
-  body {
-    font-size: 75%;
-  }
-  .wrapper .container {
-    width: 90%;
-  }
-}
-
-@media (max-width: 475px) {
-  body {
-    font-size: 70%;
-  }
-}
-
 @media (max-width: 443px) {
   body {
     font-size: 90%;
   }
-  .wrapper {
-    .container {
-      width: 90%;
+
+  .event {
+    display: block;
+    //   grid-template-columns: 1fr;
+    //   grid-template-rows: auto auto auto auto;
+    //   grid-template-areas:
+    //     "date"
+    //     "info"
+    //     "venu"
+    //     "btn";
+
+    .event_date {
+      padding: 0 1em 0 0;
+
+      h3 {
+        padding: 0;
+        text-align: start;
+        width: 100%;
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .event_name {
+      padding: 0.5em 0;
+    }
+
+    .event_venu {
+      .event_time {
+        margin-left: inherit;
+        padding-top: 0.1em;
+      }
+      .event_loc {
+        text-align: inherit;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: 88%;
+  }
+  .event {
+    & > * {
+      padding-left: 0.6em !important;
+      padding-right: 1em !important;
+    }
+    .event_desc {
+      display: none !important;
     }
   }
 }
