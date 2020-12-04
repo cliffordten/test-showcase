@@ -1,9 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './events.styles.scss';
 import Event from '../../components/event/event.component';
+import events from "../../data/event.json"
 
 function EventPage(props) {
+
     return (
         <div className="wrapper">
             <div className="container">
@@ -13,7 +14,11 @@ function EventPage(props) {
                     </div>
                 </div>
                 <div className="row event_container">
-               <Event/>
+                {
+                    events.map(({id, ...data}) => (
+                        <Event key={id} {...data}/>
+                    ))
+                }
                </div>
             </div>
         </div>
