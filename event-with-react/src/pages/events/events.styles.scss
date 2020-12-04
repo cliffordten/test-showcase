@@ -1,0 +1,116 @@
+//************************* event global styles ****************************//
+
+.wrapper {
+  width: 100%;
+  background-color: #161616;
+  color: #f8f8f8;
+
+  .container {
+    width: 70%;
+    margin: auto;
+    padding: 1em;
+
+    .event_title {
+      width: fit-content;
+      margin: auto;
+      background-color: #f8f8f8;
+      color: #161616;
+
+      h2 {
+        padding: 0.2em 0.6em;
+        letter-spacing: 0.3em;
+        font-weight: 200;
+        text-transform: uppercase;
+        font-size: 0.8em;
+      }
+    }
+
+    .event_container {
+      padding: 1em 0;
+
+      & > .row {
+        width: 100%;
+      }
+
+      .event {
+        display: flex;
+        padding: 1em 0;
+        border-bottom: 0.1em solid #f8f8f8;
+
+        & > .col {
+          flex: 1;
+          padding-right: 1.2em;
+        }
+
+        & > .col.event_info {
+          flex: 2;
+        }
+
+        .event_info,
+        .event_venu {
+          .event_name,
+          .event_time {
+            width: 100%;
+            border-bottom: 0.1em solid #f8f8f8;
+            padding-bottom: 0.5em;
+
+            h3 {
+              font-weight: 550;
+            }
+          }
+
+          .event_desc,
+          .event_loc {
+            overflow: hidden;
+            width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin: 0.7em 0;
+            font-size: 0.9em;
+
+            p {
+              font-weight: 300;
+              line-height: 1.4em;
+            }
+          }
+        }
+
+        .event_venu {
+          .event_time {
+            width: fit-content;
+            margin-left: auto;
+          }
+          .event_loc {
+            text-align: right;
+          }
+        }
+
+        .event_date {
+          h3 {
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+            width: 20%;
+            padding: 0.3em 0.7em;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      button[type="button"] {
+        padding: 0.4em 0;
+        background-color: unset;
+        color: #f38c01;
+        border: 0;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//************************* event responsive query media styles ****************************//

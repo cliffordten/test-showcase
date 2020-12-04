@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import EventPage from './pages/event.page';
+import EventPage from './pages/events/events.page';
 import PageNotFound from './pages/not-found.page';
 
 const App = () => (
