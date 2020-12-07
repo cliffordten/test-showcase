@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import colors from "../color.styles";
 
 const Event = ({date, title, time, loc}) => {
@@ -20,7 +20,7 @@ const Event = ({date, title, time, loc}) => {
                 </View>
             </View>
             <View>
-                <TouchableOpacity style={styles.locWrapper} onPress={() => {}} underlayColor='#fff'>
+                <TouchableOpacity style={styles.locWrapper} onPress={() => {}}>
                     <Text style={styles.buttonTxt}>+ Event Details</Text>
                 </TouchableOpacity>
             </View>

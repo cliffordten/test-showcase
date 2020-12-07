@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import colors from "../color.styles";
 import Event from '../components/event.component';
 import data from "../data/event.json";
@@ -9,7 +9,7 @@ const Events = () => {
   const [events, setEvents] = useState(data)
   return (
     <View>
-          <ScrollView>
+      <ScrollView style={styles.scrolView}>
         <View style={styles.titleWrapper}>
           <Text style={styles.title}>Events</Text>
         </View>
@@ -20,12 +20,17 @@ const Events = () => {
               ))
             }
         </View>
-          </ScrollView>
+      </ScrollView>
+      
     </View>
   );
 } 
 
 const styles = StyleSheet.create({
+  scrolView : {
+    paddingTop: 30,
+    paddingBottom: 30,
+  },
   eventContainer: {
     paddingHorizontal: 20,
   },
@@ -41,7 +46,6 @@ const styles = StyleSheet.create({
     letterSpacing: 6
 
   },
- 
 
 });
 export default Events;
