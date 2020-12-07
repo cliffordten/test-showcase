@@ -1,5 +1,5 @@
 //************************* event global styles ****************************//
-
+@import "../../styles/colors";
 .event {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -8,7 +8,7 @@
     "date info info venu"
     "date btn btn btn";
   padding: 1em 0;
-  border-bottom: 1px solid #606770;
+  border-bottom: 1px solid $border-color;
 
   .event_info {
     grid-area: info;
@@ -29,7 +29,7 @@
     .event_name,
     .event_time {
       width: 100%;
-      border-bottom: 1px solid #606770;
+      border-bottom: 1px solid $border-color;
       padding-bottom: 0.5em;
 
       h3 {
@@ -46,7 +46,7 @@
       -webkit-box-orient: vertical;
       margin: 0.7em 0;
       font-size: 0.9em;
-      color: #ababab;
+      color: $desc-color;
 
       p {
         font-weight: 300;
@@ -81,7 +81,7 @@
 button[type="button"] {
   padding: 0.4em 0;
   background-color: unset;
-  color: #f38c01;
+  color: $primary-color;
   border: 0;
   font-size: 0.9em;
 

@@ -1,9 +1,10 @@
 //************************* event global styles ****************************//
+@import "../../styles/colors";
 
 .wrapper {
   width: 100%;
-  background-color: #1b1b1b;
-  color: #d5d5d5;
+  background-color: $background-dark;
+  color: $app-color;
 
   .container {
     width: 70%;
@@ -13,8 +14,8 @@
     .event_title {
       width: fit-content;
       margin: auto;
-      background-color: #f8f8f8;
-      color: #161616;
+      background-color: $title-background;
+      color: $title-color;
 
       h2 {
         padding: 0.3em 0.6em;
@@ -34,7 +35,7 @@
     }
 
     .floating_btn {
-      background-color: #f38c01;
+      background-color: $primary-color;
       padding: 0.9em 0.8em 0.5em;
       border-radius: 50%;
       width: fit-content;
